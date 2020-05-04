@@ -2,7 +2,7 @@
   "name": "habitual-cdk",
   "version": "0.1.0",
   "bin": {
-    "habitual-cdk": "build/bin/index.js"
+    "habitual-cdk": "bin/index.ts"
   },
   "scripts": {
     "build": "tsc",
@@ -25,7 +25,6 @@
     "@aws-cdk/aws-lambda": "^1.36.1",
     "@aws-cdk/aws-s3": "^1.36.1",
     "@aws-cdk/core": "1.36.1",
-    "aws-sdk": "^2.668.0",
     "source-map-support": "^0.5.16"
   }
 }

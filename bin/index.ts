@@ -7,5 +7,3 @@ import { MainStack } from '../lib/stacks';
 const app = new cdk.App();
 
 new MainStack(app, 'HabitualCdkStack');
-
-app.synth();
