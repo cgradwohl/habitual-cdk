@@ -2,7 +2,7 @@
   "name": "habitual-cdk",
   "version": "0.1.0",
   "bin": {
-    "habitual-cdk": "bin/index.js"
+    "habitual-cdk": "build/bin/index.js"
   },
   "scripts": {
     "build": "tsc",
@@ -13,10 +13,10 @@
   "devDependencies": {
     "@aws-cdk/assert": "1.36.1",
     "@types/jest": "^25.2.1",
-    "@types/node": "10.17.5",
+    "@types/node": "^10.17.5",
+    "aws-cdk": "1.36.1",
     "jest": "^25.5.0",
     "ts-jest": "^25.3.1",
-    "aws-cdk": "1.36.1",
     "ts-node": "^8.1.0",
     "typescript": "~3.7.2"
   },
@@ -25,6 +25,7 @@
     "@aws-cdk/aws-lambda": "^1.36.1",
     "@aws-cdk/aws-s3": "^1.36.1",
     "@aws-cdk/core": "1.36.1",
+    "aws-sdk": "^2.668.0",
     "source-map-support": "^0.5.16"
   }
 }
