@@ -2,7 +2,7 @@
   "name": "habitual-cdk",
   "version": "0.1.0",
   "bin": {
-    "habitual-cdk": "bin/habitual-cdk.js"
+    "habitual-cdk": "src/index.js"
   },
   "scripts": {
     "build": "tsc",

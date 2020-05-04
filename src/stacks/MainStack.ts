@@ -1,6 +1,6 @@
 import * as cdk from '@aws-cdk/core';
 
-import { WidgetService } from './WidgetService';
+import { WidgetService } from '../services/WidgetService';
 
 export class MainStack extends cdk.Stack {
 

@@ -12,7 +12,7 @@ export class WidgetService extends core.Construct {
     const handler = new lambda.Function(this, "WidgetHandler", {
       runtime: lambda.Runtime.NODEJS_10_X, // So we can use async in widget.js
       code: lambda.Code.asset("functions"),
-      handler: "widgets.main",
+      handler: "widgets.handler",
       environment: {
         BUCKET: bucket.bucketName
       }
@@ -24,6 +24,12 @@ export class WidgetService extends core.Construct {
       restApiName: "Widget Service",
       description: "This service serves widgets."
     });
+
+    const getWidgetsIntegration = new apigateway.LambdaIntegration(handler, {
+      requestTemplates: { "application/json": '{ "statusCode": "200" }' }
+    });
+
+    api.root.addMethod("GET", getWidgetsIntegration); // GET /
 
     const widget = api.root.addResource("{id}");
 
