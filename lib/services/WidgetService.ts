@@ -3,7 +3,7 @@ import * as apigateway from "@aws-cdk/aws-apigateway";
 import * as lambda from "@aws-cdk/aws-lambda";
 import * as s3 from "@aws-cdk/aws-s3";
 
-export class WidgetService extends core.Construct {
+export default class WidgetService extends core.Construct {
   constructor(scope: core.Construct, id: string) {
     super(scope, id);
 
@@ -11,7 +11,7 @@ export class WidgetService extends core.Construct {
 
     const handler = new lambda.Function(this, "WidgetHandler", {
       runtime: lambda.Runtime.NODEJS_10_X, // So we can use async in widget.js
-      code: lambda.Code.asset("functions"),
+      code: lambda.Code.asset("assets"),
       handler: "widgets.handler",
       environment: {
         BUCKET: bucket.bucketName

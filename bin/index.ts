@@ -2,7 +2,7 @@
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
 
-import { MainStack } from './stacks/MainStack';
+import { MainStack } from '../lib/stacks';
 
 const app = new cdk.App();
 
